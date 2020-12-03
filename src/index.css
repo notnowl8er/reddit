@@ -3,8 +3,10 @@
 
 /* VARIABLES -- THEME: LIGHT MODE*/
 :root {
+  --main-font: "Mulish", sans-serif;
+  --secondary-font: "Poppins", sans-serif;
 }
-/* VARIABLES -- THEME: LIGHT MODE*/
+/* VARIABLES -- THEME: DARK MODE*/
 [data-theme="dark"] {
 }
 
