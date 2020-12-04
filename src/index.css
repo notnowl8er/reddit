@@ -3,6 +3,7 @@
 
 /* VARIABLES -- THEME: LIGHT MODE*/
 :root {
+  --logo-height: 2rem;
   --main-font: "Mulish", sans-serif;
   --secondary-font: "Poppins", sans-serif;
   --orange: rgb(253, 69, 0);
@@ -32,12 +33,115 @@ body {
 
 .home {
   display: grid;
-  grid-template-columns: 10rem 1fr;
+  grid-template-columns: 15rem 1fr;
   grid-template-rows: 1fr;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
+}
+.main {
+  background-color: var(--white-1);
 }
 
+/* SideMenu */
 input {
-  border-radius: 0 0.15rem 0.15rem 0;
+  width: 90%;
+  padding: 0.5rem 0.25rem;
+  border: 0.2rem solid var(--white-1);
+  border-radius: 0 1rem 1rem 0;
+}
+
+input:focus {
+  outline: none;
+  border-radius: 0 1rem 1rem 0;
+  border: 0.1rem solid var(--grey-1);
+}
+.sideMenu {
+}
+.sideMenu__top-logo {
+  display: flex;
+  align-items: center;
+  font-family: var(--main-font);
+  font-weight: 400;
+}
+.sideMenu__top-searchBar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+.sideMenu__top-searchBar input {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.sideMenu__top-searchBar i {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: end;
+  align-self: center;
+  padding-right: 2.5rem;
+  color: var(--grey-3);
+  font-size: 0.9rem;
+}
+
+.logo {
+  width: var(--logo-height);
+  height: var(--logo-height);
+  background-color: var(--orange);
+  border-radius: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.fa-reddit-alien {
+  color: var(--white-1);
+  font-size: calc(var(--logo-height) - 60%);
+}
+.sideMenu-padding {
+  padding: 2rem;
+}
+.margin-right-1 {
+  margin-right: 0.5rem;
+}
+
+ul {
+  list-style-type: none;
+  color: var(--grey-2);
+  font-weight: bold;
+  font-family: var(--secondary-font);
+}
+
+.bottom-border {
+  border-bottom: 0.2rem solid var(--white-1);
+}
+
+.list-bottom-padding li:not(:last-child) {
+  padding-bottom: 1rem;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.selected {
+  color: var(--orange);
+}
+
+/* Nav*/
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__left,
+.nav__right {
+  display: flex;
+}
+.nav__left li:not(:last-child),
+.nav__right li:not(:last-child) {
+  padding-right: 1rem;
+}
+
+.post {
+  margin: 0 2rem 2rem 2rem;
+  background-color: var(--white-2);
+  height: 100vh;
+  border-radius: 0.25rem;
 }
