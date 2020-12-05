@@ -4,7 +4,9 @@ export const Nav = () => {
   return (
     <nav className="nav sideMenu-padding">
       <ul className="nav__left">
-        <li key="1">Hot</li>
+        <li key="1" className="selected">
+          Hot
+        </li>
         <li key="2">New</li>
         <li key="3">Top</li>
         <li key="4">Raising</li>

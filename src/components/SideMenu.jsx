@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import logo from "../assets/reddit.svg";
 import { categories } from "../helper/categories";
 
-export const SideMenu = () => {
+export const SideMenu = ({ selected, setSelected }) => {
   const [categorie, setCategorie] = useState([categories]);
-  console.log(categorie);
+
+  const handleSelected = (subreddit) => {
+    setSelected(subreddit);
+  };
+  console.log(selected);
   return (
     <div className="sideMenu">
       <div className="sideMenu__top">
@@ -32,7 +36,11 @@ export const SideMenu = () => {
       <div className="sideMenu__bottom sideMenu-padding scroll">
         <ul className="sideMenu__bottom-catagories list-bottom-padding">
           {categorie[0].map((item) => {
-            return <li key={item.id}>{item.topic}</li>;
+            return (
+              <li onClick={() => handleSelected(item.topic)} key={item.id}>
+                {item.topic}
+              </li>
+            );
           })}
         </ul>
       </div>
