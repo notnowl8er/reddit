@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../assets/reddit.svg";
-import { categories } from "../helper/categories";
+import { categories, sort } from "../helper/categories";
 
 export const SideMenu = ({ selected, setSelected }) => {
   const [categorie, setCategorie] = useState([categories]);
@@ -8,7 +8,9 @@ export const SideMenu = ({ selected, setSelected }) => {
   const handleSelected = (subreddit) => {
     setSelected(subreddit);
   };
-  console.log(selected);
+  const handleSort = (sort) => {
+    console.log(sort);
+  };
   return (
     <div className="sideMenu">
       <div className="sideMenu__top">
@@ -24,12 +26,13 @@ export const SideMenu = ({ selected, setSelected }) => {
         </div>
         <div className="sideMenu__top-sort sideMenu-padding bottom-border">
           <ul className="list-bottom-padding">
-            <li key="1" className="selected">
-              Popular
-            </li>
-            <li key="2">All</li>
-            <li key="3">Random</li>
-            <li key="4">Users</li>
+            {sort.map((item) => {
+              return (
+                <li onClick={() => handleSort(item.sort)} key={item.id}>
+                  {item.sort}
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>

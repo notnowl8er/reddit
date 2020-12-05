@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Post = ({ title, score, comments, creator }) => {
+export const Post = ({ title, score, comments, creator, image }) => {
   return (
     <div className="post">
       <div className="post__score">
@@ -9,7 +9,9 @@ export const Post = ({ title, score, comments, creator }) => {
         <i className="fas fa-caret-down"></i>
       </div>
       <div className="post__image">
-        <div className="img-container"></div>
+        <div className="img-container">
+          <img src={image} alt="" />
+        </div>
       </div>
       <div className="post__info">
         <h2 className="post__info-title">{title}</h2>
