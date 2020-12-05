@@ -14,8 +14,8 @@ export let categories = [
   { id: 12, topic: "politics" },
   { id: 13, topic: "nba" },
   { id: 14, topic: "warriors" },
-  { id: 15, topic: "warriors" },
-  { id: 16, topic: "warriors" },
-  { id: 17, topic: "warriors" },
-  { id: 18, topic: "warriors" },
+  { id: 15, topic: "niners" },
+  { id: 16, topic: "sports" },
+  { id: 17, topic: "nfl" },
+  { id: 18, topic: "sanjose" },
 ];

@@ -4,14 +4,18 @@ export const Nav = () => {
   return (
     <nav className="nav sideMenu-padding">
       <ul className="nav__left">
-        <li>Hot</li>
-        <li>New</li>
-        <li>Top</li>
-        <li>Raising</li>
+        <li key="1">Hot</li>
+        <li key="2">New</li>
+        <li key="3">Top</li>
+        <li key="4">Raising</li>
       </ul>
       <ul className="nav__right">
-        <li className="bell">Bell</li>
-        <li className="user">notnowl8er</li>
+        <li key="1" className="bell">
+          Log In
+        </li>
+        <li key="2" className="user">
+          Sign Up
+        </li>
       </ul>
     </nav>
   );

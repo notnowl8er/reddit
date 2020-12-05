@@ -4,31 +4,34 @@ import { categories } from "../helper/categories";
 
 export const SideMenu = () => {
   const [categorie, setCategorie] = useState([categories]);
+  console.log(categorie);
   return (
     <div className="sideMenu">
       <div className="sideMenu__top">
         <div className="sideMenu__top-logo sideMenu-padding">
           <div className="logo margin-right-1">
-            <i class="fab fa-reddit-alien"></i>
+            <i className="fab fa-reddit-alien"></i>
           </div>
           <h1>reddit</h1>
         </div>
         <div className="sideMenu__top-searchBar">
           <input type="text" placeholder="Search" id="" />
-          <i class="fas fa-search"></i>
+          <i className="fas fa-search"></i>
         </div>
         <div className="sideMenu__top-sort sideMenu-padding bottom-border">
           <ul className="list-bottom-padding">
-            <li className="selected">popular</li>
-            <li>all</li>
-            <li>random</li>
-            <li>users</li>
+            <li key="1" className="selected">
+              Popular
+            </li>
+            <li key="2">All</li>
+            <li key="3">Random</li>
+            <li key="4">Users</li>
           </ul>
         </div>
       </div>
       <div className="sideMenu__bottom sideMenu-padding scroll">
         <ul className="sideMenu__bottom-catagories list-bottom-padding">
-          {categories.map((item) => {
+          {categorie[0].map((item) => {
             return <li key={item.id}>{item.topic}</li>;
           })}
         </ul>
