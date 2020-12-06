@@ -1,15 +1,25 @@
 import React from "react";
+import { navSort } from "../helper/categories";
 
-export const Nav = () => {
+export const Nav = ({ setSort }) => {
+  const handleSelected = (select) => {
+    setSort(select.toLowerCase());
+  };
   return (
     <nav className="nav sideMenu-padding">
       <ul className="nav__left">
-        <li key="1" className="selected">
-          Hot
-        </li>
-        <li key="2">New</li>
-        <li key="3">Top</li>
-        <li key="4">Raising</li>
+        {navSort.map((item) => {
+          return (
+            <li
+              onClick={() => {
+                handleSelected(item.sort);
+              }}
+              key={item.id}
+            >
+              {item.sort}
+            </li>
+          );
+        })}
       </ul>
       <ul className="nav__right">
         <li key="1" className="bell">

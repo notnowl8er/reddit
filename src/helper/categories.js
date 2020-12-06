@@ -25,3 +25,9 @@ export let sort = [
   { id: 1, sort: "Popular" },
   { id: 2, sort: "All" },
 ];
+
+export const navSort = [
+  { id: 1, sort: "Hot" },
+  { id: 2, sort: "New" },
+  { id: 3, sort: "Top" },
+];

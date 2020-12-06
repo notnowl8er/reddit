@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Post } from "./Post";
 import { redditAPI } from "../helper/fetchAPI";
 
-export const PostContainer = ({ selected }) => {
+export const PostContainer = ({ selected, sort }) => {
   const [posts, setPosts] = useState();
   useEffect(() => {
-    const reddit = redditAPI(selected);
+    const reddit = redditAPI(selected, sort);
     reddit.then((item) => setPosts(item.splice(1)));
-  }, [selected]);
+  }, [selected, sort]);
 
   return (
     <div className="postContainer">
