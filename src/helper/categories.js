@@ -1,5 +1,4 @@
 export let categories = [
-  { id: 19, topic: "all" },
   { id: 0, topic: "askreddit" },
   { id: 1, topic: "worldnews" },
   { id: 2, topic: "videos" },
@@ -22,8 +21,7 @@ export let categories = [
 ];
 
 export let sort = [
-  { id: 0, sort: "Best" },
-  { id: 1, sort: "Hot" },
-  { id: 2, sort: "New" },
-  { id: 3, sort: "Top" },
+  { id: 0, sort: "Home" },
+  { id: 1, sort: "Popular" },
+  { id: 2, sort: "All" },
 ];
