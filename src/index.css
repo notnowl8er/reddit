@@ -42,6 +42,7 @@ body {
 }
 .main {
   background-color: var(--white-1);
+  position: relative;
 }
 
 /* SideMenu */
@@ -58,7 +59,7 @@ input:focus {
   border: 0.1rem solid var(--grey-1);
 }
 .sideMenu {
-  overflow: hidden;
+  height: 100vh;
 }
 .sideMenu__top-logo {
   display: flex;
@@ -83,9 +84,6 @@ input:focus {
   padding-right: 2.5rem;
   color: var(--grey-3);
   font-size: 0.9rem;
-}
-.sideMenu__bottom {
-  overflow-y: scroll;
 }
 
 .logo {
@@ -204,10 +202,13 @@ li {
 }
 .post__info-title {
   color: var(--grey-1);
+  cursor: pointer;
+  width: 100%;
 }
 .post__image {
   align-self: center;
   justify-self: center;
+  cursor: pointer;
 }
 .img-container img {
   border-radius: 0.4rem;
@@ -218,4 +219,20 @@ li {
 }
 .img-container img:hover {
   transform: scale(1.5);
+}
+.module {
+  background-color: red;
+  height: 50%;
+  width: 50%;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.module img {
+  object-fit: fill;
+  height: 100%;
+  width: 100%;
 }
