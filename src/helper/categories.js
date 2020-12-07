@@ -27,7 +27,7 @@ export let sort = [
 ];
 
 export const navSort = [
-  { id: 1, sort: "Hot" },
-  { id: 2, sort: "New" },
-  { id: 3, sort: "Top" },
+  { id: 0, sort: "Hot" },
+  { id: 1, sort: "New" },
+  { id: 2, sort: "Top" },
 ];
