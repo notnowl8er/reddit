@@ -191,8 +191,7 @@ li {
 .post__info-title {
   color: var(--grey-1);
 }
-.img-container {
-}
+
 .img-container img {
   border-radius: 0.4rem;
   object-fit: fill;
