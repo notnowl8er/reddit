@@ -3,12 +3,27 @@ import { Image } from "./Image";
 import { Info } from "./Info";
 import { Score } from "./Score";
 
-export const Post = ({ title, score, comments, creator, image, setImage }) => {
+export const Post = ({
+  title,
+  score,
+  comments,
+  creator,
+  image,
+  setImage,
+  url,
+  setUrlLink,
+}) => {
   return (
     <div className="post">
       <Score score={score} />
       <Image image={image} setImage={setImage} />
-      <Info title={title} creator={creator} comments={comments} />
+      <Info
+        title={title}
+        creator={creator}
+        comments={comments}
+        url={url}
+        setUrlLink={setUrlLink}
+      />
     </div>
   );
 };
