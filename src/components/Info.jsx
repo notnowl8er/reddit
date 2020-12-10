@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const Info = ({ title, creator, comments, url, setUrlLink }) => {
+export const Info = ({ title, creator, comments, url, setUrlLink, posts }) => {
   const handleClick = (url) => {
-    setUrlLink(url);
+    setUrlLink({ url: url, posts: posts });
   };
   return (
     <div className="post__info">

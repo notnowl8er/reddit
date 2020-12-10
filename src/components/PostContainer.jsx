@@ -26,15 +26,16 @@ export const PostContainer = ({ selected, sort, setUrlLink }) => {
               url={item.data.permalink}
               setImage={setImage}
               setUrlLink={setUrlLink}
+              posts={item}
             />
           );
         })
       ) : (
-        <div class="container">
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
+        <div className="container">
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
         </div>
       )}
       <ImageModule image={image} />

@@ -1,22 +1,31 @@
 import React from "react";
 
-export const Comments = ({ comments }) => {
+export const Comments = ({ comments, posts }) => {
+  console.log(posts);
   return (
     <ul>
       {comments
         ? comments
-            .filter((comment) => comment.data.replies !== undefined)
+            .filter(
+              (comment) =>
+                comment.data.replies !== undefined &&
+                comment.data.replies !== ""
+            )
             .map((comment) => {
               return (
-                <details>
-                  <summary>
-                    <li className="comments" key={comment.data.id}>
-                      <h6>{`${comment.data.author} - ${comment.data.score} points`}</h6>
-                      <h6>{comment.data.body}</h6>
-                    </li>
-                  </summary>
-                  <dt>1</dt>
-                </details>
+                <li key={comment.data.id} className="comments">
+                  <p>{`${comment.data.author} - ${comment.data.score} points`}</p>
+                  <p>{comment.data.body}</p>
+                  <ul>
+                    {comment.data.replies.data.children.map((item) => {
+                      return (
+                        <li key={item.data.id} className="comments subComment">
+                          {item.data.body}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </li>
               );
             })
         : "Loading..."}

@@ -12,6 +12,7 @@ export const Post = ({
   setImage,
   url,
   setUrlLink,
+  posts,
 }) => {
   return (
     <div className="post">
@@ -23,6 +24,7 @@ export const Post = ({
         comments={comments}
         url={url}
         setUrlLink={setUrlLink}
+        posts={posts}
       />
     </div>
   );

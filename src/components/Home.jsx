@@ -7,7 +7,7 @@ import { LinkPage } from "./LinkPage";
 export const Home = () => {
   const [selected, setSelected] = useState("all");
   const [sort, setSort] = useState("best");
-  const [urlLink, setUrlLink] = useState("");
+  const [urlLink, setUrlLink] = useState();
   const removeOpacity = () => {
     const home = document.getElementById("home");
     home.style.opacity = "1";

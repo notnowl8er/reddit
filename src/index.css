@@ -61,6 +61,13 @@ input:focus {
 .sideMenu {
   height: 100vh;
 }
+.sideMenu,
+.nav {
+  color: var(--grey-2);
+  font-weight: bold;
+  font-family: var(--secondary-font);
+  font-size: 0.75rem;
+}
 .sideMenu__top-logo {
   display: flex;
   align-items: center;
@@ -108,13 +115,6 @@ input:focus {
 
 ul {
   list-style-type: none;
-  color: var(--grey-2);
-  font-weight: bold;
-  font-family: var(--secondary-font);
-}
-li {
-  cursor: pointer;
-  font-size: 0.75rem;
 }
 
 .bottom-border {
@@ -262,10 +262,7 @@ li {
 .linkPage-close i {
   font-size: 1.4rem;
 }
-.comments {
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
+
 .loading {
   display: grid;
   place-items: center;
