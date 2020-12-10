@@ -239,10 +239,86 @@ li {
 
 .linkPage {
   height: 100vh;
-  width: calc(100vw - 30rem);
+  width: 60%;
   background-color: var(--white-2);
   top: 0;
   right: 0;
   position: absolute;
-  overflow: scroll;
+  overflow-y: scroll;
+  padding: 2rem;
+}
+.linkPage-close {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+.linkPage-close ul {
+  display: flex;
+  align-items: center;
+}
+.linkPage-close li {
+  padding-right: 1rem;
+  text-transform: uppercase;
+}
+.linkPage-close i {
+  font-size: 1.4rem;
+}
+.comments {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.loading {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+}
+.container {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 400px;
+  height: 400px;
+}
+.container .circle {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  background: rgba(138, 43, 226, 0.02);
+}
+.container .circle:nth-of-type(1) {
+  width: 6rem;
+  height: 5.4rem;
+  animation: rt 2s infinite linear;
+  box-shadow: 0 0 1px 0 rgb(253, 69, 0), inset 0 0 10px 0 rgb(253, 69, 0);
+}
+.container .circle:nth-of-type(2) {
+  width: 5.4rem;
+  height: 6rem;
+  animation: rt 3.3s infinite linear;
+  box-shadow: 0 0 1px 0 rgb(253, 69, 0), inset 0 0 10px 0 rgb(253, 69, 0);
+}
+.container .circle:nth-of-type(3) {
+  width: 6.3rem;
+  height: 5.7rem;
+  animation: rt 2.1s infinite linear;
+  box-shadow: 0 0 1px 0rgb (253, 69, 0), inset 0 0 10px 0 rgb(253, 69, 0);
+}
+.container .circle:nth-of-type(4) {
+  width: 5.7rem;
+  height: 6.3rem;
+  animation: rt 5s infinite linear;
+  box-shadow: 0 0 1px 0 rgb(253, 69, 0), inset 0 0 10px 0 rgb(253, 69, 0);
+}
+
+@keyframes rt {
+  100% {
+    transform: rotate(360deg);
+  }
 }

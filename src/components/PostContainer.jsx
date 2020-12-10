@@ -30,7 +30,12 @@ export const PostContainer = ({ selected, sort, setUrlLink }) => {
           );
         })
       ) : (
-        <h1>Loading...</h1>
+        <div class="container">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
       )}
       <ImageModule image={image} />
     </div>

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Comments } from "./Comments";
+import { Post } from "./Post";
 
 export const LinkPage = ({ urlLink }) => {
   const [comments, setComments] = useState([]);
@@ -10,17 +12,23 @@ export const LinkPage = ({ urlLink }) => {
   useEffect(() => {
     fetchAPI(urlLink);
     const home = document.getElementById("home");
-    home.style.opacity = "0.3";
+    //home.style.opacity = "0.2";
   }, []);
   return (
     <div className="linkPage">
-      <ul>
-        {comments
-          ? comments.map((comment) => {
-              return <li key={comment.data.id}>{comment.data.body}</li>;
-            })
-          : "Loading..."}
-      </ul>
+      <div className="linkPage-close">
+        <ul>
+          <li>
+            <i className="fas fa-times"></i>
+          </li>
+          <li className="selected">comments</li>
+        </ul>
+      </div>
+      <div className="linkPage-post"></div>
+      <div className="linkPage-content"></div>
+      <div className="linkPage-comments">
+        <Comments comments={comments} />
+      </div>
     </div>
   );
 };
