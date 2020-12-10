@@ -10,7 +10,11 @@ export const SubReddits = ({ setSelected }) => {
     <ul className="sideMenu__bottom-catagories list-bottom-padding sideMenu-padding">
       {categorie[0].map((item) => {
         return (
-          <li onClick={() => handleSelected(item.topic)} key={item.id}>
+          <li
+            className="list-items"
+            onClick={() => handleSelected(item.topic)}
+            key={item.id}
+          >
             {item.topic}
           </li>
         );

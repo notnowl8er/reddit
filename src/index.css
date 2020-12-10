@@ -319,3 +319,10 @@ ul {
     transform: rotate(360deg);
   }
 }
+
+.list-items {
+  cursor: pointer;
+}
+.active-link {
+  color: var(--orange);
+}

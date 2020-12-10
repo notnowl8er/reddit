@@ -4,7 +4,18 @@ import { Image } from "./Image";
 export const Media = ({ posts }) => {
   const checkMediaType = (post) => {
     if (post.data.is_self) {
-      return <h1>{`Text: ${post.data.url}`}</h1>;
+      return;
+    } else if (
+      !post.data.is_self &&
+      post.data.media === null &&
+      post.data.post_hint !== "image"
+    ) {
+      return (
+        <div>
+          <span>Article: </span>
+          <a href={post.data.url}>{[post.data.url]}</a>
+        </div>
+      );
     } else if (post.data.media === null) {
       let checkEnd = post.data.url.split(".");
       let end = checkEnd[checkEnd.length - 1];

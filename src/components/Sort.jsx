@@ -10,7 +10,11 @@ export const Sort = () => {
       <ul className="list-bottom-padding">
         {sort.map((item) => {
           return (
-            <li onClick={() => handleSort(item.sort)} key={item.id}>
+            <li
+              className="list-items"
+              onClick={() => handleSort(item.sort)}
+              key={item.id}
+            >
               {item.sort}
             </li>
           );

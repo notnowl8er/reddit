@@ -11,6 +11,7 @@ export const Nav = ({ setSort }) => {
         {navSort.map((item) => {
           return (
             <li
+              className="list-items"
               onClick={() => {
                 handleSelected(item.sort);
               }}
@@ -22,10 +23,10 @@ export const Nav = ({ setSort }) => {
         })}
       </ul>
       <ul className="nav__right">
-        <li key="1" className="bell">
+        <li key="1" className="bell list-items">
           Log In
         </li>
-        <li key="2" className="user">
+        <li key="2" className="user list-items">
           Sign Up
         </li>
       </ul>
