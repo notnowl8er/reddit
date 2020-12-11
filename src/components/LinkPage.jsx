@@ -23,7 +23,6 @@ export const LinkPage = ({ urlLink }) => {
           <li>
             <i className="fas fa-times"></i>
           </li>
-          <li className="selected">comments</li>
         </ul>
       </div>
       <div className="linkPage-post">

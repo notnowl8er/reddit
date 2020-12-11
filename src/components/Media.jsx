@@ -25,11 +25,11 @@ export const Media = ({ posts }) => {
         console.log(n);
         return <h1>Its a fucking gifv</h1>;
       }
-      return <Image image={post.data.url} />;
+      return <img src={post.data.url} alt="" />;
     } else {
       return <h1>{`Video: ${post.data.url}`}</h1>;
     }
   };
 
-  return <div>{checkMediaType(posts)}</div>;
+  return <div className="link-media">{checkMediaType(posts)}</div>;
 };
