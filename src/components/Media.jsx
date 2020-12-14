@@ -22,7 +22,6 @@ export const Media = ({ posts }) => {
       if (end === "gifv") {
         end = "webm";
         let n = checkEnd.join("");
-        console.log(n);
         return <h1>Its a fucking gifv</h1>;
       }
       return <img src={post.data.url} alt="" />;

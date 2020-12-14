@@ -1,7 +1,6 @@
 import React from "react";
 
 export const Comments = ({ comments, posts }) => {
-  console.log(posts);
   return (
     <ul className="link-comm">
       {comments

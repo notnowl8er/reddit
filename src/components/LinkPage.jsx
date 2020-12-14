@@ -4,7 +4,6 @@ import { Media } from "./Media";
 import { Post } from "./Post";
 
 export const LinkPage = ({ urlLink }) => {
-  console.log(urlLink.url);
   const [comments, setComments] = useState([]);
   const fetchAPI = async (link) => {
     const fetchReddit = await fetch(`https://www.reddit.com${link}.json`);
@@ -13,8 +12,8 @@ export const LinkPage = ({ urlLink }) => {
   };
   useEffect(() => {
     fetchAPI(urlLink.url);
-    //const home = document.getElementById("home");
-    //home.style.opacity = "0.2";
+    // const home = document.getElementById("home");
+    // home.style.opacity = "0.4";
   }, []);
   return (
     <div className="linkPage">

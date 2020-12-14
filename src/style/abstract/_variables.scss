@@ -1,0 +1,11 @@
+:root {
+  --text-font: "Poppins", sans-serif;
+  --heading-font: "Mulish", sans-serif;
+  /* VARIABLES -- THEME: LIGHT MODE */
+  --main: rgb(0, 233, 233);
+}
+
+// VARIABLES -- THEME: DARK MODE
+[data-theme="dark"] {
+  --main: rgb(0, 0, 0);
+}

@@ -1,0 +1,49 @@
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  em {
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
+}
+.theme-switch {
+  display: inline-block;
+  height: 3.4rem;
+  position: relative;
+  width: 6rem;
+  input {
+    display: none;
+  }
+  input:checked + .slider {
+    background-color: yellow;
+  }
+  input:checked + .slider:before {
+    transform: translateX(2.6rem);
+  }
+}
+.slider {
+  background-color: red;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+  &:before {
+    background-color: green;
+    bottom: 0.4rem;
+    content: "";
+    height: 2.6rem;
+    left: 0.4rem;
+    position: absolute;
+    transition: 0.4s;
+    width: 2.6rem;
+  }
+  &.round {
+    border-radius: 3.4rem;
+  }
+  &.round:before {
+    border-radius: 50%;
+  }
+}
